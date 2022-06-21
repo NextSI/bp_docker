@@ -1,0 +1,15 @@
+version: "3.7"
+
+services:
+    bp-container:
+        build:
+            context: '.'
+            dockerfile: Dockerfile
+        image: bp-image
+        container_name: bp-container
+        volumes:
+            - '${BP_DATA}:/var/www/data'
+        ports:
+            - '8080:80'
+        extra_hosts:
+            - "host.docker.internal:host-gateway"
