@@ -9,7 +9,7 @@ COPY ioncube_loader_lin_7.4.so /var/www
 RUN a2enmod rewrite
 
 # Copiando os arquivos do BP para a pasta /var/www/html
-COPY ./bp/ /var/www/html
+COPY ./bp_build/ /var/www/html
 
 # Acessando a Pasta /var/www
 RUN cd /var/www

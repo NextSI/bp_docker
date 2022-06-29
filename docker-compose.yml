@@ -1,16 +1,18 @@
 version: "3.7"
 
 services:
-    bp-container:
-        build:
-            context: '.'
-            dockerfile: Dockerfile
-        image: bp-image
-        container_name: bp-container
+    nextbp-container:
+        # build:
+        #     context: '.'
+        #     dockerfile: Dockerfile
+        image: nextsi/nextbp
+        container_name: nextbp-container
         volumes:
             - '${BP_CONFIG}:/var/www/html/webservice/config'
             - '${BP_DATA}:/var/www/data'
             - '${BP_ESPECIFICOS}:/var/www/html/webservice/especificos'
+            - '${LOGO_TRANSP}:/var/www/html/assets/img/logo_transp.png'
+            - '${FAVICON}:/var/www/html/assets/img/favicon.png'
         ports:
             - '8080:80'
         extra_hosts:
