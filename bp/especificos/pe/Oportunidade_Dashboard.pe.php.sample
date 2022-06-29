@@ -1,0 +1,20 @@
+
+<?php
+
+use \Sys\Util;
+use \Sys\Basic;
+use \Sys\Validation;
+use \Sys\DB;
+
+function oportunidade_dashboard_filtro(&$filtro_oportunidades_ganhas_qtd, &$filtro_oportunidades_ganhas_soma, &$filtro_oportunidades_perdidas_qtd, &$filtro_oportunidades_perdidas_soma, &$filtro_oportunidades_estagnadas_qtd, &$filtro_oportunidades_estagnadas_soma, &$filtro_oportunidades_atrasadas_qtd, &$filtro_oportunidades_atrasadas_soma) {
+    $filtro_oportunidades_ganhas_qtd = 'OR ((oportunidade.representante_usuario_id = representante.usuario_id OR oportunidade.representante_usuario2_id = representante.usuario_id) AND oportunidade.tipo_oportunidade_id IN (4,5)';
+    $filtro_oportunidades_ganhas_soma = 'OR ((oportunidade.representante_usuario_id = representante.usuario_id OR oportunidade.representante_usuario2_id = representante.usuario_id) AND oportunidade.tipo_oportunidade_id = 4';
+};
+
+function oportunidade_altera_valores(&$arr_representantes, &$dt_ini, &$dt_fim){
+    print_r($arr_representantes);
+}
+
+function oportunidade_representante(&$oportunidades){
+    print_r($oportunidades);
+}

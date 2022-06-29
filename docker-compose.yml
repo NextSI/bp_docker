@@ -8,7 +8,9 @@ services:
         image: bp-image
         container_name: bp-container
         volumes:
+            - '${BP_CONFIG}:/var/www/html/webservice/config'
             - '${BP_DATA}:/var/www/data'
+            - '${BP_ESPECIFICOS}:/var/www/html/webservice/especificos'
         ports:
             - '8080:80'
         extra_hosts:

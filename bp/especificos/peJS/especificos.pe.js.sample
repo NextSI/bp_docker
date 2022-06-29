@@ -1,0 +1,127 @@
+App.PE.Chamado_Listagem_show_antes = function(main) {
+}
+
+App.PE.Chamado_Novo_Reclassificacao_show_antes = function(main) {   
+}
+
+App.PE.Chamado_Novo_Reclassificacao_show_depois = function(main) {   
+}
+
+App.PE.Chamado_Novo_Reclassificacao_salvar_depois = function(chamado_id, novo_chamado, chamado_detalhes) {
+    
+}
+
+App.PE.Chamado_Encerramento_show_antes = function(main) {
+    
+}
+
+App.PE.Chamado_Encerramento_show_depois = function(main) {
+    
+}
+
+App.PE.Chamado_Encerramento_salvar_depois = function(chamado_id, encerramento_chamado) {
+    
+}
+
+App.PE.Chamado_Mensagem_salvar_depois = function(chamado_id, nova_mensagem) {
+    
+}
+
+
+App.PE.Chamado_Detalhes_show_antes = function(main) {
+
+}
+
+App.PE.Chamado_Detalhes_show_depois = function(main) {
+
+}
+
+App.PE.Chamado_Detalhes_listar_mensagens_antes = function(main) {
+
+}
+
+App.PE.Chamado_Detalhes_listar_mensagens_depois = function(main) {
+
+}
+
+App.PE.Oportunidade_render_itens_add_row_antes = function(new_row, main, index) {
+}
+
+App.PE.Oportunidade_adicionar_item = function(main, item, new_row, index){
+}
+
+App.PE.Oportunidade_remover_item = function(item, new_row){
+}
+
+App.PE.Oportunidade_render_itens_add_row_depois = function(new_row, main, index) {
+}
+
+App.PE.Oportunidade_download_orcamento_antes = function(main, empresa_id, oportunidade_orcamento_id, callback_download) {
+    callback_download(empresa_id, oportunidade_orcamento_id);
+}
+
+App.PE.formulario_render_antes = function(parametros) {
+}
+
+App.PE.formulario_render_depois = function(parametros) {
+}
+
+App.PE.formulario_ao_executar_evento = function(obj_solicitacao, obj_campo, div_formulario, tipo, id_elemento, form_start, handler, execute) {
+}
+
+App.PE.formulario_render_btn_add = function(tabela, obj_solicitacao, main) {
+}
+
+App.PE.formulario_render_tabela_depois = function(tabela, obj_solicitacao) {
+}
+
+App.PE.formulario_calcula_total_tabela_antes = function(tabela, obj_tabela_campo, obj_valor, parametros) {
+}
+
+App.PE.formulario_calcula_total_tabela_depois = function(tabela, obj_tabela_campo, obj_valor, parametros) {
+}
+
+App.PE.Solicitacao_Listagem_show_antes = function(main) {
+}
+
+App.PE.Solicitacao_Detalhes_show_antes = function(main) {
+}
+
+App.PE.Solicitacao_Detalhes_ao_selecionar_cliente = function(main, cliente_selecionado) {
+    // alterar campo do formulário com dados do cliente selecionado
+    // main.form_editor.find('[id_elemento="edt_nome_fantasia"]').val(cliente_selecionado.nome_fantasia).trigger('change');
+    // main.form_editor.find('[id_elemento="edt_endereco"]').val(cliente_selecionado.endereco).trigger('change');
+}
+
+App.PE.Lang_load_depois = function() {
+    // Exemplo de alteração do menu "Chamados" para "Tarefas":
+    // App.lang.home.gestao_chamados = "Tarefas";
+}
+
+App.PE.Solicitacao_Atividade_Salvar_Enviar_Antes = function(main, callback_enviar) {
+    // abrir tela "Enviar"
+    callback_enviar();
+}
+
+App.PE.Solicitacao_Atividade_Salvar_Enviar_Depois = function(main) {
+    // alert_saved(main.atividade.descricao + ' salvo com sucesso');
+    // main.libera_download();
+}
+
+App.PE.Login_depois = function() {
+}
+
+App.PE.Menu_Lateral_destruir_depois = function() {
+}
+
+App.PE.Imprimir_Formulario_Solicitacao = function(main) {
+    // var arr = [];
+                    
+    // arr.push(main.dialog.find('.div_topo').clone());
+    // arr.push(main.dialog.find('.aba_formulario').clone());
+
+    // imprimir_div(true, arr);
+}
+
+App.PE.Listagem_Documentos_Primeiro_Acesso = function() {
+}
