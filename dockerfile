@@ -32,6 +32,9 @@ RUN apt-get update && apt-get install -y libzip-dev && docker-php-ext-install zi
 # Instalando o MySQL
 RUN docker-php-ext-install mysqli pdo pdo_mysql
 
+# Instalando as funções de calendário do PHP
+RUN docker-php-ext-install calendar
+
 # Criando a pasta data
 RUN mkdir data
 
