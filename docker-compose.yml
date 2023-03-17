@@ -1,10 +1,17 @@
 version: "3.7"
 
 services:
+    mysql-container:
+        image: 'mysql:5.6'
+        container_name: 'mysql-container'
+        volumes:
+            - '${DATABASE_PATH}/config:/etc/mysql/conf.d'
+            - '${DATABASE_PATH}/data:/var/lib/mysql'
+        ports:
+            - '3306:3306'
+        environment:
+            MYSQL_ROOT_PASSWORD: '${DATABASE_PASSWORD}'
     nextbp-container:
-        # build:
-        #     context: '.'
-        #     dockerfile: Dockerfile
         image: nextsi/nextbp
         container_name: nextbp-container
         volumes:
