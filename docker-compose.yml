@@ -1,18 +1,8 @@
 version: "3.7"
 
 services:
-    mysql-container:
-        image: 'mysql:5.6'
-        container_name: 'mysql-container'
-        volumes:
-            - '${DATABASE_PATH}/config:/etc/mysql/conf.d'
-            - '${DATABASE_PATH}/data:/var/lib/mysql'
-        ports:
-            - '3306:3306'
-        environment:
-            MYSQL_ROOT_PASSWORD: '${DATABASE_PASSWORD}'
     nextbp-container:
-        image: nextsi/nextbp
+        image: nextsi/nextbp:latest
         container_name: nextbp-container
         volumes:
             - '${BP_CONFIG}:/var/www/html/webservice/config'
@@ -24,3 +14,11 @@ services:
             - '8080:80'
         extra_hosts:
             - "host.docker.internal:host-gateway"
+        environment:
+            PHP_INI_POST_MAX_SIZE: '${PHP_INI_POST_MAX_SIZE}'
+            PHP_INI_UPLOAD_MAX_FILESIZE: '${PHP_INI_UPLOAD_MAX_FILESIZE}'
+            PHP_INI_MAX_FILE_UPLOADS: '${PHP_INI_MAX_FILE_UPLOADS}'
+            PHP_INI_MAX_INPUT_TIME: '${PHP_INI_MAX_INPUT_TIME}'
+            PHP_INI_MAX_EXECUTION_TIME: '${PHP_INI_MAX_EXECUTION_TIME}'
+            PHP_INI_MEMORY_LIMIT: '${PHP_INI_MEMORY_LIMIT}'
+            PHP_INI_MEMORY_LIMIT: '${PHP_INI_MEMORY_LIMIT}'
