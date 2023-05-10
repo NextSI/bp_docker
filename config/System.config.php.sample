@@ -69,6 +69,5 @@ define('SHOW_SQL_ERRORS', false);
 define('DB_HOST', 'mariadb-container');
 define('DB_PORT', '3306');
 define('DB_NAME', 'base_local');
-define('DB_USER', 'next_bp');
 define('DB_USER', 'root');
 define('DB_PASSWORD', 'root');

@@ -1,6 +1,16 @@
 version: "3.7"
 
 services:
+    mysql-container:
+        image: 'mysql:8.0.32-oracle'
+        container_name: 'mysql-container'
+        volumes:
+            - '${DATABASE_PATH}/config:/etc/mysql/conf.d'
+            - '${DATABASE_PATH}/data:/var/lib/mysql'
+        ports:
+            - '3306:3306'
+        environment:
+            MYSQL_ROOT_PASSWORD: '${DATABASE_PASSWORD}'
     nextbp-container:
         image: nextsi/nextbp:latest
         container_name: nextbp-container
@@ -21,4 +31,5 @@ services:
             PHP_INI_MAX_INPUT_TIME: '${PHP_INI_MAX_INPUT_TIME}'
             PHP_INI_MAX_EXECUTION_TIME: '${PHP_INI_MAX_EXECUTION_TIME}'
             PHP_INI_MEMORY_LIMIT: '${PHP_INI_MEMORY_LIMIT}'
-            PHP_INI_MEMORY_LIMIT: '${PHP_INI_MEMORY_LIMIT}'
+        links:
+            - mysql-container
