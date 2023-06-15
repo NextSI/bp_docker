@@ -16,6 +16,7 @@ services:
         container_name: nextbp-container
         volumes:
             - '${BP_CONFIG}:/var/www/html/webservice/config'
+            - '${BP_LOG}:/var/www/html/webservice/log'
             - '${BP_DATA}:/var/www/data'
             - '${BP_ESPECIFICOS}:/var/www/html/webservice/especificos'
             - '${LOGO_TRANSP}:/var/www/html/assets/img/logo_transp.png'
